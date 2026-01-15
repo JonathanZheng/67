@@ -1,0 +1,24 @@
+data:
+  frames_per_clip: 48
+  spatial_size: 224
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+
+model:
+  backbone: movinet_a2
+  dropout: 0.3
+  pretrained: true
+
+training:
+  batch_size: 4
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  epochs: 20
+  early_stopping_patience: 5
+
+inference:
+  window_sec: 2.0
+  stride_sec: 0.5
+  cooldown_sec: 1.5
+  confidence_threshold: 0.5
